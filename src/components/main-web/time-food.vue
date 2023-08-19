@@ -21,7 +21,10 @@
         </div>
         </div>
         <div class="btn">
-            <v-btn text="Xem thêm" class="bg-green btn-time" flat="true" min-width="181" min-height="48" color="red"></v-btn>
+          <button class="btn-text">Xem thêm</button>
+            <!-- <v-btn text="Xem thêm" class="bg-green btn-time" flat="true" min-width="181" min-height="48" color="red"></v-btn> -->
+         
+            
         </div>
     </div>
     <div class="image-time">
@@ -100,7 +103,14 @@ h1{
     display: flex;
     justify-content: center;
 }
-/* .btn-time:hover{
-    background-color: red;
-} */
+.btn-text{
+  background-color: #6EAB49;
+  height: 48px;
+  width: 181px;
+  color: white;
+}
+.btn-text:hover{
+ background-color: orange;
+     transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
 </style>

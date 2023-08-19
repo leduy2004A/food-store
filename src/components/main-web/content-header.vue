@@ -1,11 +1,11 @@
 <template>
   <div class="content-header">
-    <div class="content-header d-flex align-center">
+    <div class="content-header d-flex align-center" :style="styleCss">
             <img :src="logo" alt="" class="logo">
             <ul class="title-header d-flex">
-                <li class="list-text"><a href="" class="text-header">Trang chủ</a></li>
+                <li class="list-text"><a href="/mainWeb" class="text-header">Trang chủ</a></li>
                 <li class="list-text"><a href="" class="text-header">Giới thiệu</a></li>
-                <li class="list-text"><a href="" class="text-header">Sản phẩm</a></li>
+                <li class="list-text"><a href="/mainShop" class="text-header">Sản phẩm</a></li>
                 <li class="list-text"><a href="" class="text-header">Tin tức</a></li>
                 <li class="list-text"><a href="" class="text-header">Liên hệ</a></li>
             </ul>
@@ -34,6 +34,11 @@ export default {
         return {
             logo
         }
+    },
+    props:{
+        styleCss:{
+            type:Object
+        }
     }
 }
 </script>
@@ -51,7 +56,7 @@ ul{
 li{
     margin-right: 30px;
 }
-a{
+.text-header{
 text-decoration: none;
 color: black;
 font-family: 'Be Vietnam Pro', sans-serif;
@@ -68,5 +73,8 @@ font-weight: 400;
 }
 .header{
     position: unset;
+}
+.text-header:hover{
+    color: orange;
 }
 </style>

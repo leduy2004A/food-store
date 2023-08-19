@@ -1,6 +1,6 @@
 <template>
   <div class="header-in-header w-100">
-    <div class="title-header d-flex w-100">
+    <div class="title-header d-flex w-100" :style="styleCss">
          <p class="title">Tiếng việt
             <v-icon>mdi-menu-down</v-icon>
          </p>
@@ -9,7 +9,7 @@
             Giao hàng nhanh và toàn quốc</p>
     </div>
     <v-divider></v-divider>
-    <content-header class="mt-2"></content-header>
+    <content-header class="mt-2" :styleCss="styleCss"></content-header>
   </div>
 </template>
 
@@ -18,7 +18,12 @@ import contentHeader from './content-header.vue'
 export default {
 components:{
     contentHeader
-}
+},
+props:{
+        styleCss:{
+            type:Object
+        }
+    }
 }
 </script>
 
