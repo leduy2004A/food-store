@@ -4,8 +4,8 @@
     <breadCum :items="items"></breadCum>
     <main class="main-content">
         <navShop class="nav"></navShop>
-        <content-shop class="content"></content-shop>
-        <modal-food></modal-food>
+        <content-shop class="content" @clickOpenModal="openModal()"></content-shop>
+        <modal-food v-if="isOpenModal" @offModal="clickOff()"></modal-food>
     </main>
         <footer>
             <footerWeb></footerWeb>
@@ -45,7 +45,16 @@ export default {
                     disabled: false,
                     href: '/mainShop',
                 }
-            ]
+            ],
+            isOpenModal:false
+        }
+    },
+    methods:{
+        openModal(){
+            this.isOpenModal = true
+        },
+        clickOff(){
+            this.isOpenModal = false
         }
     }
 }

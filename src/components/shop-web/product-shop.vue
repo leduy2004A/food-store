@@ -9,8 +9,8 @@
                                 <div class="add-cart">
                                     <v-icon>mdi-cart-outline</v-icon>
                                 </div>
-                                <div class="eye">
-                                    <v-icon>mdi-eye-outline</v-icon>
+                                <div class="eye" @click="openModal()">
+                                    <v-icon >mdi-eye-outline</v-icon>
                                 </div>
                             
                             </div>
@@ -29,6 +29,11 @@
 <script>
 export default {
 components:{
+},
+methods:{
+    openModal(){
+        this.$emit("clickOpen");
+    }
 }
 }
 </script>

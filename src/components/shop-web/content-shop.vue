@@ -4,7 +4,7 @@
         <v-row>
             <v-col cols="4" v-for="item in 9" :key="item">
                 <v-sheet>
-                    <productShop></productShop>
+                    <productShop @clickOpen="openModal()"></productShop>
                 </v-sheet>
             </v-col>
         </v-row>
@@ -17,6 +17,11 @@ import productShop from './product-shop.vue'
 export default {
     components:{
         productShop
+    },
+    methods:{
+        openModal(){
+            this.$emit("clickOpenModal");
+        }
     }
 }
 </script>

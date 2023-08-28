@@ -11,9 +11,9 @@
         <v-divider thickness="2" class="mt-8"></v-divider>
         <div class="footer-modal d-flex">
             <div class="number-food">
-            <button class="dec qtybutton">-</button>
-            <input class="cart-plus-minus-box input-number" type="text" readonly="" value="1">
-            <button class="inc qtybutton">+</button>
+            <button class="dec qtybutton" @click="minus()">-</button>
+            <input class="cart-plus-minus-box input-number" type="text" readonly="" :value="valueText">
+            <button class="inc qtybutton" @click="pluss()">+</button>
         </div>
         <div class="btn-collect">
             <button class="btn-add"><h3>THÊM</h3></button>
@@ -30,7 +30,27 @@
 
 <script>
 export default {
-
+    data(){
+        return {
+            valueText:1
+        }
+    },
+    methods:{
+        pluss(){
+            this.valueText += 1;
+        },
+        minus(){
+            
+            if(this.valueText === 1)
+            {
+                this.valueText = 1
+            }
+            else
+            {
+                this.valueText -= 1;
+            }
+        }
+    }
 }
 </script>
 

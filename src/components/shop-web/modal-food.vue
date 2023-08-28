@@ -1,10 +1,10 @@
 <template>
-  <div id="myModal" class="modal">
+  <div id="myModal" class="modal" @click.self="overlayOff()">
 
   <!-- Modal content -->
   <div class="modal-content">
     <div class="header-modal">
-        <v-icon>mdi-close</v-icon>
+        <v-icon @click="closeModal()" class="close">mdi-close</v-icon>
     </div>
     <v-divider :thickness="2"></v-divider>
     <div class="main-modal">
@@ -17,8 +17,29 @@
 <script>
 import detailFoodModal from './detail-food-modal.vue'
 export default {
+  props:{
+    openModal:{
+      type:Boolean
+    }
+  },
+  data(){
+    return {
+      isCloseModal:false,
+      
+    }
+  },
     components:{
         detailFoodModal
+    },
+    methods:{
+     closeModal(){
+      this.$emit("offModal")
+     },
+     overlayOff(){
+      
+      this.$emit("offModal")
+     }
+
     }
 }
 </script>
@@ -37,7 +58,9 @@ export default {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+.close:hover{
+  color: orange;
+}
 /* Modal Content */
 .modal-content {
   position: relative;

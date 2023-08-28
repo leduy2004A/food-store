@@ -16,10 +16,11 @@
                    <v-icon>mdi-swap-horizontal</v-icon> 
                 </v-badge>
                 <v-badge class="icon-header" :content="1">
-                   <v-icon>mdi-heart-outline</v-icon> 
+                   
+                  <router-link to="/love-food"><v-icon>mdi-heart-outline</v-icon></router-link>
                 </v-badge>
                 <v-badge class="icon-header" :content="1">
-                    <v-icon>mdi-bag-personal-outline</v-icon>
+                    <router-link to="/cart"> <v-icon>mdi-bag-personal-outline</v-icon></router-link>
                 </v-badge>
                 
             </div>

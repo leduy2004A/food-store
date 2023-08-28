@@ -32,24 +32,12 @@
         </ul>
     </div>
      <div class="cot3">
-        <p class="cot2-text">Chính sách mua hàng</p>
-         <p>Điều khoản</p>
-        <p>Chính sách và bảo mật</p>
-        <p class="cot2-text">Theo dõi chúng tôi</p>
-        <ul class="list-icon">
-            <li class="icon">
-                <v-icon>mdi-facebook</v-icon>
-            </li>
-            <li class="icon">
-                <v-icon>mdi-youtube</v-icon>
-            </li>
-            <li class="icon">
-                <v-icon>mdi-twitter</v-icon>
-            </li>
-            <li class="icon">
-                <v-icon>mdi-instagram</v-icon>
-            </li>
-        </ul>
+        <div class="text">
+           <p class="cot2-text">Đăng kí ngay</p>
+         <i>Đăng kí để cập nhật những thông tin mới nhất về chúng tôi</i> 
+         <input type="text" class="input-email mt-10 mb-2" placeholder="Nhập email của bạn">
+         <i class="dki">Đăng kí</i>
+        </div>
     </div>
   </div>
 </template>
@@ -76,6 +64,17 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 0 200px;
+    flex-wrap: wrap;
+}
+.input-email{
+    border-bottom:2px solid white;
+    outline: none;
+    width: 100%;
+    color: white;
+}
+.dki{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .cot1{
     flex: 1;
@@ -114,5 +113,11 @@ p{
 ul{
     list-style: none;
     display: flex;
+}
+i{
+    color: white;
+}
+.text{
+    text-align: center;
 }
 </style>
