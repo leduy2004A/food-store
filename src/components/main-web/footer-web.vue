@@ -1,5 +1,6 @@
 <template>
-  <div class="footer-web">
+<div class="footer-main">
+    <div class="footer-web">
     <div class="cot1">
         <img :src="logo_footer" alt="" class="anh-footer">
         <p class="ads text-center">Poly Food là nhà hàng Thuần chay và Cung cấp thực phẩm chay</p>
@@ -40,6 +41,8 @@
         </div>
     </div>
   </div>
+</div>
+  
 </template>
 
 <script>
@@ -119,5 +122,16 @@ i{
 }
 .text{
     text-align: center;
+}
+.icon{
+    margin: 5px;
+}
+.footer-main{
+    position: relative;
+}
+.food-chat{
+    position: absolute;
+    top: -90px;
+    right: 20px;
 }
 </style>

@@ -23,28 +23,5 @@ export default {
 </script>
 
 <style>
-.logo{
-    width: 200px;
-}
-ul{
-    list-style: none;
-    align-items: center;
-}
-li{
-    margin-right: 30px;
-}
-a{
-text-decoration: none;
-color: black;
-}
-.content-header{
-    width: 100%;
-    justify-content: space-around;
-}
-.icon-header{
-    margin-right: 20px;
-}
-.header{
-    position: unset;
-}
+
 </style>

@@ -4,11 +4,11 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="header-modal">
-        <v-icon @click="closeModal()" class="close">mdi-close</v-icon>
+        <v-icon @click="closeModal()" class="close text-cblack">mdi-close</v-icon>
     </div>
     <v-divider :thickness="2"></v-divider>
     <div class="main-modal">
-        <detailFoodModal></detailFoodModal>
+        <detailFoodModal :itemFood="itemFood"></detailFoodModal>
     </div>
   </div>
   </div>
@@ -20,6 +20,9 @@ export default {
   props:{
     openModal:{
       type:Boolean
+    },
+    itemFood:{
+      type:Object
     }
   },
   data(){
@@ -59,7 +62,7 @@ export default {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .close:hover{
-  color: orange;
+  color: orange !important
 }
 /* Modal Content */
 .modal-content {

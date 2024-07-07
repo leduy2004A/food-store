@@ -1,14 +1,26 @@
 <template>
   <div class="cart">
-    <table-love-vue :headerTable="headerTable" :contentTable="contentTable" :title="title"></table-love-vue>
+    <cartTableVue @getprice="Duyne(duy)"></cartTableVue>
+    <div class="bill">
+      <billPayVue></billPayVue>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import tableLoveVue from '../love-food/table-love.vue'
+import billPayVue from './bill-pay.vue'
+import cartTableVue from './cart-table.vue'
 export default {
+  methods:{
+    Duyne(duy)
+    {
+      console.log(duy)
+    }
+  },
   components:{
-    tableLoveVue
+    cartTableVue,
+    billPayVue
   },
   data(){
     return {
@@ -30,6 +42,11 @@ export default {
   }
 </script>
 
-<style>
-
+<style scoped>
+.bill{
+  width:80% ;
+  margin: 50px auto;
+  display: flex;
+  justify-content: flex-end;
+}
 </style>

@@ -12,6 +12,7 @@ import headerInHeaderVue from '../main-web/header-in-header.vue'
 import breadCumVue from '../shop-web/bread-cum.vue'
 import cartFoodVue from './cart-food.vue'
 import footerWebVue from '../main-web/footer-web.vue'
+// import cartTableVue from './cart-table.vue'
 export default {
     components:{
         headerInHeaderVue,

@@ -2,6 +2,7 @@
   <div class="feedback">
      <div class="feedback-content">
     <swiper
+    :loop="true"
     :spaceBetween="30"
     :centeredSlides="true"
     :autoplay="{
@@ -16,7 +17,7 @@
           <div class="content-main">
             <div class="feedback">
               <v-avatar :image="guy1" size="90" class="text-center"></v-avatar>
-            <p class="my-8">
+            <p class="my-8 text-cblack">
 Hiếm có nhà hàng chay nào lại quan tâm tới khách hàng như Poly Food, nhân viên tư vấn số lượng đồ ăn hợp lý, trước khi đóng order hỏi khách có bị dị ứng với thành phần nào không. Thực sự rất ấn tượng về chất lượng phục vụ cũng như đồ ăn của các bạn. Chắc chắn sẽ quay lại vào lần gần nhất.</p>
             <v-icon class="icon">mdi-clipboard-text</v-icon>
             <div class="name-feedback"><h2>Lê Duy</h2></div>

@@ -2,10 +2,9 @@
   <div class="image-content">
    
  <swiper
-    :spaceBetween="30"
     :effect="'fade'"
     :autoplay="{
-      delay: 4000,
+      delay: 3000,
       disableOnInteraction: false,
     }"
     :modules="modules"
@@ -37,17 +36,17 @@
         <div class="content-slogan d-flex align-center justify-center flex-column">
             <img :src="support_5" alt="" class="support-img">
             <img :src="support_8" alt="">
-            <p>MIỄN PHÍ VẬN CHUYỂN</p>
+            <p class="text-black">MIỄN PHÍ VẬN CHUYỂN</p>
         </div>
         <div class="content-slogan mau1 cach-item d-flex align-center justify-center flex-column">
              <img :src="support_6" alt="" class="support-img">
             <img :src="support_9" alt="">
-            <p>CHÍNH SÁCH HOÀN TRẢ TIỀN</p>
+            <p class="text-black">CHÍNH SÁCH HOÀN TRẢ TIỀN</p>
         </div>
         <div class="content-slogan mau2 d-flex align-center justify-center flex-column">
              <img :src="support_7" alt="" class="support-img">
             <img :src="support_10" alt="">
-            <p>GIẢM GIÁ LÊN ĐẾN 70%</p>
+            <p class="text-black mt-2">GIẢM GIÁ LÊN ĐẾN 70%</p>
         </div>
     </div>
 

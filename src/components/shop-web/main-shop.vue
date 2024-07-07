@@ -1,11 +1,11 @@
 <template>
-  <div class="main-shop">
+  <div class="main-shop" @click="test()">
     <headerInHeader :styleCss="styleCss"></headerInHeader>
     <breadCum :items="items"></breadCum>
     <main class="main-content">
         <navShop class="nav"></navShop>
-        <content-shop class="content" @clickOpenModal="openModal()"></content-shop>
-        <modal-food v-if="isOpenModal" @offModal="clickOff()"></modal-food>
+        <content-shop class="content" @clickOpenModal="openModal"></content-shop>
+        <modal-food v-if="isOpenModal" @offModal="clickOff()" :itemFood="itemFood"></modal-food>
     </main>
         <footer>
             <footerWeb></footerWeb>
@@ -31,6 +31,7 @@ export default {
     },
     data(){
         return {
+            itemFood:{},
             styleCss:{
                padding:'0px 160px' 
             },
@@ -46,15 +47,20 @@ export default {
                     href: '/mainShop',
                 }
             ],
-            isOpenModal:false
+            isOpenModal:false,
+            reloadComponent:0
         }
     },
     methods:{
-        openModal(){
+        openModal(food){
             this.isOpenModal = true
+            this.itemFood = food
         },
         clickOff(){
             this.isOpenModal = false
+        },
+        test(){
+            this.reloadComponent +=1
         }
     }
 }

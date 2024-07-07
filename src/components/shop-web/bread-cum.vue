@@ -1,6 +1,7 @@
 <template>
   <div class="bread-cum mt-2">
-     <v-breadcrumbs 
+     <v-breadcrumbs
+     color="corange"
       :items="items"
       divider="/"
     ></v-breadcrumbs>
